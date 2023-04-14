@@ -1,0 +1,93 @@
+.clock-grid {
+  display: inline-flex;
+  gap: 15px;
+}
+
+.clock-grid-left {
+  flex-direction: row;
+}
+
+.clock-grid-right {
+  flex-direction: row-reverse;
+}
+
+.clock-grid-top {
+  flex-direction: column;
+}
+
+.clock-grid-bottom {
+  flex-direction: column-reverse;
+}
+
+.clock-circle {
+  place-self: center;
+  position: relative;
+  border-radius: 50%;
+  background-size: 100%;
+}
+
+.clock-face {
+  width: 100%;
+  height: 100%;
+}
+
+.clock-face::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 6px;
+  height: 6px;
+  margin: -3px 0 0 -3px;
+  background: var(--color-text-bright);
+  border-radius: 3px;
+  content: "";
+  display: block;
+}
+
+.clock-hour {
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -2px 0 -2px -25%; /* numbers must match negative length & thickness */
+  padding: 2px 0 2px 25%; /* indicator length & thickness */
+  background: var(--color-text-bright);
+  transform-origin: 100% 50%;
+  border-radius: 3px 0 0 3px;
+}
+
+.clock-minute {
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -35% -2px 0; /* numbers must match negative length & thickness */
+  padding: 35% 2px 0; /* indicator length & thickness */
+  background: var(--color-text-bright);
+  transform-origin: 50% 100%;
+  border-radius: 3px 0 0 3px;
+}
+
+.clock-second {
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -38% -1px 0 0; /* numbers must match negative length & thickness */
+  padding: 38% 1px 0 0; /* indicator length & thickness */
+  background: var(--color-text);
+  transform-origin: 50% 100%;
+}
+
+.module.clock .sun,
+.module.clock .moon {
+  display: flex;
+}
+
+.module.clock .sun > *,
+.module.clock .moon > * {
+  flex: 1;
+}

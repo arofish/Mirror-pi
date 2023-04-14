@@ -1,0 +1,34 @@
+{% if hourly %}
+    {% set numSteps = hourly | calcNumEntries %}
+    {% set currentStep = 0 %}
+    <table class="{{ config.tableClass }}">
+        {% set hours = hourly.slice(0, numSteps) %}
+        {% for hour in hours %}
+            <tr {% if config.colored %}class="colored"{% endif %} {% if config.fade %}style="opacity: {{ currentStep | opacity(numSteps) }};"{% endif %}>
+                <td class="day">{{ hour.date | formatTime }}</td>
+                <td class="bright weather-icon"><span class="wi weathericon wi-{{ hour.weatherType }}"></span></td>
+                <td class="align-right bright">
+                    {{ hour.temperature | roundValue | unit("temperature") }}
+                </td>
+                {% if config.showPrecipitationAmount %}
+                    <td class="align-right bright precipitation-amount">
+                        {{ hour.precipitationAmount | unit("precip", hour.precipitationUnits) }}
+                    </td>
+                {% endif %}
+                {% if config.showPrecipitationProbability %}
+                    <td class="align-right bright precipitation-prob">
+                        {{ hour.precipitationProbability | unit("precip", "%") }}
+                    </td>
+                {% endif %}
+            </tr>
+            {% set currentStep = currentStep + 1 %}
+        {% endfor %}
+    </table>
+{% else %}
+    <div class="dimmed light small">
+        {{ "LOADING" | translate }}
+    </div>
+{% endif %}
+
+<!-- Uncomment the line below to see the contents of the `hourly` object. -->
+<!-- <div style="word-wrap:break-word" class="xsmall dimmed">{{hourly | dump}}</div> -->
