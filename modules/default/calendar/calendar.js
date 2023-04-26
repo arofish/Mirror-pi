@@ -46,7 +46,7 @@ Module.register("calendar", {
 		calendars: [
 			{
 				symbol: "calendar-alt",
-				url: "https://www.calendarlabs.com/templates/ical/US-Holidays.ics"
+                url: "https://raw.githubusercontent.com/KaitoHH/24-jieqi-ics/master/23_solar_terms_2015-01-01_2050-12-31.ics"
 			}
 		],
 		titleReplace: {

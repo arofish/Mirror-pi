@@ -9,10 +9,20 @@ Module.register("newsfeed", {
 	defaults: {
 		feeds: [
 			{
-				title: "New York Times",
-				url: "https://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml",
+                title: "中国新闻网",
+                url: "https://www.chinanews.com.cn/rss/scroll-news.xml",
 				encoding: "UTF-8" //ISO-8859-1
-			}
+            },
+/*            {
+                title: "联合早报<国际>",
+                url: "http://zaobao.feedsportal.com/c/34003/f/616931/index.rss",
+                ncoding: "UTF-8" //ISO-8859-1
+            },
+            {
+                title: "联合早报<国内>",
+                url: "http://zaobao.feedsportal.com/c/34003/f/616930/index.rss",
+                ncoding: "UTF-8" //ISO-8859-1
+            }*/
 		],
 		showAsList: false,
 		showSourceTitle: true,
