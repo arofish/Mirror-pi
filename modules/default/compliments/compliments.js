@@ -9,9 +9,9 @@ Module.register("compliments", {
 	defaults: {
 		compliments: {
 			anytime: ["How are you do↓ing↑"],
-			morning: ["Good morning, handsome!", "Enjoy your day!", "How was your sleep?"],
+			morning: ["早上好 快起来去做重要的事吧", "Enjoy your day!", "How was your sleep?"],
 			afternoon: ["Hello, beauty!", "You look sexy!", "Looking good today!"],
-			evening: ["Wow, you look hot!", "You look nice!", "Hi, sexy!"],
+            evening: ["晚上好 今天要早点睡觉噢", "You look nice!", "Hi, sexy!"],
 			"....-01-01": ["Happy new year!"]
 		},
 		updateInterval: 30000,
