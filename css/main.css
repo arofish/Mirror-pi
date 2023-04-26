@@ -208,7 +208,7 @@ sup {
 
 .region.bar {
   width: 100%;
-  text-align: center;
+  text-align: center;/*不要改这个蛇皮玩意,去MICHMICH的github上看看评论区*/
 }
 
 .region.third,
