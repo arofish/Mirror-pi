@@ -94,8 +94,9 @@ let config = {
 			config: {
 				feeds: [
 					{
-						title: "New York Times",
-						url: "https://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml"
+                        title: "中国新闻网",
+                        url: "https://www.chinanews.com.cn/rss/scroll-news.xml",
+                        encoding: "UTF-8" //ISO-8859-1
 					}
 				],
 				showSourceTitle: true,
@@ -103,7 +104,27 @@ let config = {
 				broadcastNewsFeeds: true,
 				broadcastNewsUpdates: true
 			}
-		},
+        },
+        {
+            module: 'voicecontrol',
+            position: 'middle_center',
+            config: {
+                models: [
+                    {
+                        keyword: "playMusic",   // keyword 
+                        description: "Say 'Play Music' to start playing",
+                        file: "playMusic.pmdl", // trained model file name
+                        message: "PLAY_MUSIC"   // notification message that's broadcast in the MagicMirror app
+                    },
+                    {
+                        keyword: "stopMusic",
+                        description: "Say 'Stop Music' to stop playing",
+                        file: "stopMusic.pmdl",
+                        message: "STOP_MUSIC"
+                    },
+                ]
+            }
+        }
 	]
 };
 
