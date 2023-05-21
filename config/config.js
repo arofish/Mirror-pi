@@ -107,20 +107,38 @@ let config = {
         },
         {
             module: 'voicecontrol',
-            position: 'middle_center',
+            position: 'upper_third',
             config: {
                 models: [
                     {
-                        keyword: "playMusic",   // keyword 
-                        description: "Say 'Play Music' to start playing",
-                        file: "playMusic.pmdl", // trained model file name
-                        message: "PLAY_MUSIC"   // notification message that's broadcast in the MagicMirror app
+                        //keyword: "playMusic",   // keyword 
+                        description: "你可以对我说",
+                        //file: "playMusic.pmdl", // trained model file name
+                        //message: "PLAY_MUSIC"   // notification message that's broadcast in the MagicMirror app
                     },
                     {
-                        keyword: "stopMusic",
-                        description: "Say 'Stop Music' to stop playing",
-                        file: "stopMusic.pmdl",
-                        message: "STOP_MUSIC"
+                        //keyword: "remainder",
+                        description: "'今天下午三点提醒我取快递'",
+                        //file: "remainder.pmdl",
+                        //message: "remainder"
+                    },
+                    {
+                        //keyword: "weather",
+                        description: "'今天北京天气怎么样'",
+                        //file: "weather.pmdl",
+                        //message: "weather"
+                    },
+                    {
+                       // keyword: "playMusic",
+                        description: "'播放本地音乐'",
+                       // file: "playMusic.pmdl", // trained model file
+                        //message: "PLAY_MUSIC"
+                    },
+                    {
+                        // keyword: "playMusic",
+                        description: "...",
+                        // file: "playMusic.pmdl", // trained model file
+                        //message: "PLAY_MUSIC"
                     },
                 ]
             }

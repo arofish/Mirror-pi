@@ -32,7 +32,10 @@
 - Blog: [https://michaelteeuw.nl/tagged/magicmirror](https://michaelteeuw.nl/tagged/magicmirror)
 - Donations: [https://magicmirror.builders/#donate](https://magicmirror.builders/#donate)
 
+## 文件结构
 
+-git后将.wokong文件夹、wukong-robot文件夹放在/home/User目录下
+.wokong、wukong-robot、Mirror-pi是在同一个父目录下的
 
 ## 小组成员
 ### @liquidfish / @arofish
