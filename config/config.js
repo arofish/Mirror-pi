@@ -171,7 +171,7 @@ let config = {
 			  // Use Raspberry Pi camera or another type
 			  // 1 = RasPi camera, 0 = other camera
 			  //usePiCamera: 1,
-			  usePiCamera: 0,
+			  usePiCamera: 1,
 			  // Brightness, negative is darker, positive is brighter
 			  brightness: 0,
 			  // Contrast, positive value for more contrast
@@ -193,7 +193,7 @@ let config = {
 			  animationSpeed: 0,
 			  // Path to Python to run the face recognition
 			  // null or '' means default path
-			  pythonPath: null,
+			  pythonPath: '',
 			  // Should a welcome message be shown using the MagicMirror alerts module?
 			  welcomeMessage: true,
 			  // Dictionary for person name mapping in welcome message
@@ -212,6 +212,38 @@ let config = {
 			  resolution: [1280, 960],
 			  // width of the image for processing
 			  processWidth: 500,
+			}
+		},
+		{
+			module: 'MMM-CECControl',
+			config: {
+				// Comport of your Raspberry Pi
+				comport: 'RPI',
+				// Turn the TV off if the Mirror start
+				offOnStartup: true,
+				// Turn xScreensaver off if TV turn on
+				xscreensaver: false,
+				// Use customCmdOn and customCmdOff instead of CEC
+				useCustomCmd: false,
+				// Custom command to run to turn TV on
+				customCmdOn: 'vcgencmd display_power 1',
+				// Custom command to run to turn TV off
+				customCmdOff: 'vcgencmd display_power 0'
+			}
+		},
+		{
+			module: 'MMM-MotionControl',
+			config: {
+				// Delay to turn the TV off
+				delay: 15000,
+				// Interval to check modules
+				interval: 5000,
+				// Use the module MMM-Facial-Recognition-OCV3
+				useFacialRecognitionOCV3: false,
+				// Use the module MMM-Face-Reco-DNN
+				useMMMFaceRecoDNN: true,
+				// Array where tv should be on
+				ontime: ['0000-2359']
 			}
 		},
 	]
