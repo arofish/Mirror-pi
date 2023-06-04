@@ -1,13 +1,13 @@
 robot_name_cn: '镜面派'
-first_name: '你好呀'
-last_name: '呀'
+first_name: '嘿'
+last_name: 'null'
 timezone: HKT
 location: '北京'
 
 # 后台管理端
 server:
     enable: true
-    host: '10.122.252.174'  # ip 地址
+    host: '10.122.215.22'  # ip 地址
     port: '5001'     # 端口号
     username: 'wukong'  # 用户名
     # cookie 的 secret ，用于对 cookie 的内容进行加密及防止篡改
@@ -25,7 +25,7 @@ server:
 # snowboy
 detector: snowboy
 # 灵敏度
-sensitivity: 0.5
+sensitivity: 0.43
 
 # porcupine 离线唤醒
 # 登录 https://console.picovoice.ai/
@@ -42,7 +42,7 @@ sensitivity: 0.5
 # snowboy 离线唤醒
 # 建议使用 snowboy-seasalt (https://github.com/rhasspy/snowboy-seasalt)
 # 使用相同环境录入你的语音，以提升唤醒成功率和准确率
-hotword: 'ddl.pmdl'  # 唤醒词模型，如要自定义请放到 $HOME/.wukong 目录中
+hotword: 'babyq.pmdl'  # 唤醒词模型，如要自定义请放到 $HOME/.wukong 目录中
 silent_threshold: 20 # 判断为静音的阈值。环境比较吵杂的地方可以适当调大
 recording_timeout: 15 # 录制的语音最大长度（秒）
 
@@ -269,11 +269,11 @@ unit:
 # 如果使用网易邮箱，还需设置允许第三方客户端收发邮件
 email:
     enable: true
-    address: 'liquidfish@163.com'
-    password: 'NRMVVNVCWAUHGZOK'  # 如果是网易邮箱，须填写应用授权密码而不是登录密码！
-    smtp_server: 'smtp.163.com'
+    address: 'liquidfish@126.com'
+    password: 'YEOHQCXIDWYXRUVV'  # 如果是网易邮箱，须填写应用授权密码而不是登录密码！
+    smtp_server: 'smtp.126.com'
     smtp_port: '25'  # 这里填写非SSL协议端口号
-    imap_server: 'imap.163.com'
+    imap_server: 'imap.126.com'
     imap_port: '143'  # 这里填写非SSL协议端口号    
     read_email_title: true  # 当有邮件时，是否朗读邮件标题
 
@@ -324,7 +324,7 @@ weather:
 NeteaseMusic:
  account: '3310128804'  # 网易云音乐账号
  #密码的 md5，可以用 python3 wukong.py md5 "密码" 获得
- md5pass: 'a8105204604a0b11e916f3879aae3b0b' 
+ md5pass: 'bb4a2bbdccaa989c52443b9cad798a6f' 
 
 youdao:
     appId: '7fca83303cff5446'

@@ -171,7 +171,7 @@ let config = {
 			  // Use Raspberry Pi camera or another type
 			  // 1 = RasPi camera, 0 = other camera
 			  //usePiCamera: 1,
-			  usePiCamera: 1,
+			  usePiCamera: 0,
 			  // Brightness, negative is darker, positive is brighter
 			  brightness: 0,
 			  // Contrast, positive value for more contrast
@@ -190,7 +190,7 @@ let config = {
 			  // "cnn" is a more accurate deep-learning model which is GPU/CUDA accelerated
 			  detectionMethod: 'hog',
 			  // How long in milliseconds modules take to hide and show
-			  animationSpeed: 0,
+			  animationSpeed: 200000000000000,
 			  // Path to Python to run the face recognition
 			  // null or '' means default path
 			  pythonPath: '',
