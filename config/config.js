@@ -190,7 +190,7 @@ let config = {
 			  // "cnn" is a more accurate deep-learning model which is GPU/CUDA accelerated
 			  detectionMethod: 'hog',
 			  // How long in milliseconds modules take to hide and show
-			  animationSpeed: 200000000000000,
+			  animationSpeed: 3600000,
 			  // Path to Python to run the face recognition
 			  // null or '' means default path
 			  pythonPath: '',
@@ -220,11 +220,11 @@ let config = {
 				// Comport of your Raspberry Pi
 				comport: 'RPI',
 				// Turn the TV off if the Mirror start
-				offOnStartup: true,
+				offOnStartup: false,
 				// Turn xScreensaver off if TV turn on
 				xscreensaver: false,
 				// Use customCmdOn and customCmdOff instead of CEC
-				useCustomCmd: false,
+				useCustomCmd: true,
 				// Custom command to run to turn TV on
 				customCmdOn: 'vcgencmd display_power 1',
 				// Custom command to run to turn TV off
@@ -235,15 +235,15 @@ let config = {
 			module: 'MMM-MotionControl',
 			config: {
 				// Delay to turn the TV off
-				delay: 15000,
+				delay: 5000,
 				// Interval to check modules
-				interval: 5000,
+				interval: 6000,
 				// Use the module MMM-Facial-Recognition-OCV3
 				useFacialRecognitionOCV3: false,
 				// Use the module MMM-Face-Reco-DNN
 				useMMMFaceRecoDNN: true,
 				// Array where tv should be on
-				ontime: ['0000-2359']
+				ontime: []
 			}
 		},
 	]
